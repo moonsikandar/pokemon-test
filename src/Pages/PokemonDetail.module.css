@@ -1,10 +1,21 @@
 .wrapper{
     display: flex;
-  
+    position: relative;
+    padding-top: 20px;
+}
+.comparing{
+    position: absolute;
+    top: 205px;
+    left: 360px;
+    font-size: 25px;
+}
+.wrapper::after{
+    padding: 10px;
 }
 .wrapper >div:last-child{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap:15px;
 }
 .wrapper .bttn{
@@ -14,4 +25,5 @@
 .without_compare{
     max-width: 40%;
     margin: 0 auto;
+    text-align: center;
 }

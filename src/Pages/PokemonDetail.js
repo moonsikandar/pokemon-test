@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import CardWrapper from "../component/CardWrapper";
 import { PokeContext } from "../Store/store";
+import { BsArrowLeftRight } from "react-icons/bs";
 import classes from "./PokemonDetail.module.css";
 const PokemonDetail = () => {
   const [matchedPokis, setMatchedPokis] = useState([]);
@@ -35,6 +36,7 @@ const PokemonDetail = () => {
 
   return (
     <div className={styleChange?classes.without_compare:classes.wrapper}>
+      {styleChange?"":<BsArrowLeftRight className={classes.comparing}/>}
       <CardWrapper data={data}/>
       {isMatchFound?<div>
         {matchedPokis.map((item,index)=>{
