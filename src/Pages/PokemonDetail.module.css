@@ -1,0 +1,17 @@
+.description{
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 10px;
+}
+.description img{
+    min-height: 300px;
+    object-fit: cover;
+
+}
+.description h2{
+    color: purple;
+}
+.description li{
+    color: green;
+}

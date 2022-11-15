@@ -1,0 +1,11 @@
+.home{
+    padding-top: 15px;
+}
+.element_wrapper{
+    text-align: center;
+}
+.pagination{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
