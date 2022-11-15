@@ -11,6 +11,7 @@ function App() {
   </Link>;
   return (
     <div className="App">
+      <div className="container">
       <Store>
         <BrowserRouter>
           <Routes>
@@ -19,6 +20,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Store>
+      </div>
     </div>
   );
 }

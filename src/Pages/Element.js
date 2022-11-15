@@ -87,6 +87,7 @@ const Element = ({ pokeData, loading }) => {
           <h1>Loading ....</h1>
         ) : (
           filterItems.map((item, i) => {
+            console.log(item)
             return (
               <div key={i} onClick={() => ctx.setMyData(item)}>
                 <Card style={{ width: "16rem" }}>
@@ -109,7 +110,7 @@ const Element = ({ pokeData, loading }) => {
                      {item.name}
                     </Card.Title>
 
-                    <Card.Text>Some quick example text</Card.Text>
+                    <Card.Text>Base Experience : {item.base_experience}</Card.Text>
                     <Link to="/pokidetail">
                       <Button variant="primary">View in Detail</Button>
                     </Link>
