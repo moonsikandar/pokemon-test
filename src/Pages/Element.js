@@ -11,8 +11,6 @@ import classes from "./Element.module.css";
 const Element = ({ pokeData, loading }) => {
   const [likes, setLikes] = useState([]);
   const [query, setQuery] = useState("");
-// updating states on adding particular id into like array which is stored in firebase
-// and this query is used for searching aur we can say filter the pokemons by their name only
   const ctx = useContext(PokeContext);
    ctx.setLikedPokimons(likes)
   ctx.setAllPokisData(pokeData)
@@ -25,19 +23,12 @@ const Element = ({ pokeData, loading }) => {
         console.log("firebase fetching error", error);
       });
   }, []);
-
-  // in this function we are getting data from firebase and returning entire stored array if we have data otherwise just empty array
-  // this firebase buildin way to get data through getDocs
   const getLikedPokemon = async () => {
     const res = await getDoc(doc(db, "Pokemons","player" ));
   
     return res.data() ? res.data().Likes : [];
   };
  
-  // in this i get the data as well update
-  // if we have same id again then this will delete the existing id 
-  // and print the remaining entire data
-  //if id is not matched within the array we add the id into that array, using spread operation to adding previous state too.
   const likedPokiDataHandler = async (poki) => {
     const res = await getDoc(doc(db, "Pokemons", "player"));
    
@@ -67,17 +58,14 @@ const Element = ({ pokeData, loading }) => {
       });
     }
   };
-  // using this boolean logic by finding the same index we are changing thie heart icon
   const getLikesStatus = (id) => {
     const index = likes.findIndex((item) => item == id);
     return index >= 0 ? true : false;
   };
-  // this function storing the latest state/value from search input
   const searchHandler = (event) => {
     setQuery(event.target.value);
   };
   let filterItems = [...pokeData];
-  // if we have data the comparing the every alphbet to check matched values
   if (query.length > 0) {
     filterItems = [...pokeData];
 

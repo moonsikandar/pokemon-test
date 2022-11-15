@@ -8,17 +8,14 @@ const PokemonDetail = () => {
   const [selectedPoki, setSelectedPoki] = useState([]);
   const [styleChange,setStyleChange]=useState(true)
   const [isMatchFound,setIsMatchFound]=useState(false)
-  // we used different classes on different condition in this for styling
-  // second button will dis appear after compare data is displayed
+
   const ctx = useContext(PokeContext);
   const data = ctx.myData;
-  // in this useEfffect im just calling a setfunction to stop rendering infinite times
-  // if i simply use variable this uesEffect hook giveus error
+ 
   useEffect(() => {
     setSelectedPoki(ctx.likedPokimons)
   }, []);
-  // this function is used to compare data which is coming from firebase(basically only id is stored in firebase, by matching this id with fetched entire pokimons ids)
-  // when dataMatched we just store in other array to use this to display
+
   const comparisonHandler = () => {
     setStyleChange(false)
     ctx.allPokisData.map((ele) => {

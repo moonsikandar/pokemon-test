@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+for Developers:
+
+first of all, i have created the react app using its default commands,then installed the required packages react-router-dom,bootStrap,axios,react-icon,moving forward I fetched data  from the pokemon api, then i have seen that there is buildin pagination so i didnot use my custom pagination.
+after feching the data i have stored in variable which can easily accessable by any component via props or useContext hook.
+then this data is passed to other nested component to do multiple operation like searching and adding to favorite,comparing
+for searching, i have an input field through which i store user'svalue into state/variable using useState which is also a hook for managing data. then filtering the data this keystokes.
+furthermore, i added id of particular pokemon into the array and stored this array to firebase.
+i installed firebase to store my favourite data into the firebase, which can easily useable even after refreshing the browser.
+ i also compared the one pokemon against others to check which is has more power
+

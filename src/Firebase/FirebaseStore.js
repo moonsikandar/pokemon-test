@@ -1,4 +1,4 @@
-// configration (connection to my appliction)
+
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
@@ -10,8 +10,8 @@ const firebaseConfig = {
   appId: "1:970298579719:web:4a010d3ba5e59594b183a2"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
-// initialize DataBase
+
 export const db= getFirestore(app)

@@ -1,7 +1,6 @@
 import React from 'react'
 import classes from './CardWrapper.module.css'
-//--- this component is used multiple times that is why im using this in component folder, basically is jus t behave like card to show data only
-// i just changed it name from card to carwrapper to remove confusion in my mind
+
 const CardWrapper = ({data,index}) => {
   return (
    <>
