@@ -1,0 +1,22 @@
+.description{
+    
+    text-align: center;
+    padding: 20px 10px;
+    border: 1px solid grey;
+    margin: 5px;
+    border-radius: 10px;
+}
+.description .wapper :first-child {
+    background-color: yellow;
+  }
+.description img{
+    min-height: 300px;
+    object-fit: cover;
+
+}
+.description h2{
+    color: purple;
+}
+.description li{
+    color: green;
+}

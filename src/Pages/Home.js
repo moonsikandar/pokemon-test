@@ -2,9 +2,9 @@ import axios from "axios";
 import  Button  from "react-bootstrap/Button";
 import React, { useEffect, useState } from "react";
 import Element from "../Pages/Element";
-import PokemonDetail from "./PokemonDetail";
 import classes from "./Home.module.css"
 const Home = () => {
+  // this api already have option for for next and prevoius.
   const [pokemons, setPokemons] = useState([]);
   const [isError, setIsError] = useState();
   const [url, seturl] = useState("https://pokeapi.co/api/v2/pokemon/");
@@ -12,7 +12,9 @@ const Home = () => {
   const [previousPokes, setpreviousPokes] = useState();
   const [isLoading, setIsLoading] = useState(true);
 
-
+  // in this i have used axios which is the latest way( it also reduced code by removing one fulfilled promise)  rather than fetching 
+  // setting the loading and error laoding ifwe get some delay and we got wrong url
+  // calling the below function into useEffect for getting data whenever url changed
   const getApiData = async () => {
     try {
       setIsLoading(true);
@@ -45,9 +47,7 @@ const Home = () => {
         <Element
           pokeData={pokemons}
           loading={isLoading}
-         
-        />
-        
+        /> 
       </div>: isError}
       <div className={classes.pagination}>
       {previousPokes && (
@@ -73,5 +73,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;

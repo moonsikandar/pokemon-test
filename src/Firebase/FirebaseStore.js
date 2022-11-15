@@ -1,4 +1,4 @@
-
+// configration (connection to my appliction)
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
@@ -13,5 +13,5 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
+// initialize DataBase
 export const db= getFirestore(app)

@@ -1,17 +1,17 @@
-.description{
-    max-width: 50%;
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 10px;
+.wrapper{
+    display: flex;
+  
 }
-.description img{
-    min-height: 300px;
-    object-fit: cover;
+.wrapper >div:last-child{
+    display: flex;
+    flex-wrap: wrap;
+    gap:15px;
+}
+.wrapper .bttn{
+    max-height: 70px;
+}
 
-}
-.description h2{
-    color: purple;
-}
-.description li{
-    color: green;
+.without_compare{
+    max-width: 40%;
+    margin: 0 auto;
 }
